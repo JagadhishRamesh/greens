@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spinach</title>
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style type="text/css">	
+    body {
+   background-image: url("../bg_image.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.center {
+  margin: auto;
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  background-color: #d9d9d9;
+}
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+	</style>
+</head>
+<body>
+	<div class="center">
+  <div class="sansserif">
+<h1 id= "product">Spinach</h1>
+
+<img src="https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/270/270609/spinach.jpg?w=1155&h=1533" alt="Spinach" style="width:250px;height:250px;">
+
+<h2>Price‎: ‎Rs 22</h2>
+
+<p>
+Spinach is an excellent source of beta-carotene<br>
+These are generated when grilling foods at a high temperature<br>
+This can contribute to preventing the growth of cancer<br>
+Spinach is recommended for people with high blood pressure<br>
+Spinach is high in fiber and water<br>
+</p>
+ <br><br>
+ <button  type="button" class="btn btn-primary" onclick="cart()">Add to Cart</button>
+ <br><br>
+ <button type="button" class="btn btn-danger" onclick="buy()">Buy Now</button>
+
+ <br><br>
+ <div id="buy_option" hidden style = "border-style:solid;">
+ <p style = "float:left;">Please select the Payment method:</p>
+ <br><br><button type="button" class="btn btn-warning" >Cash on Delivery</button>
+ <br><br>
+ <button type="button" class="btn btn-secondary" >Netbanking</button><br><br>
+</div>
+
+<br><br>
+<button
+class="btn btn-link"
+    action="action"
+    onclick="window.history.go(-1); return false;"
+    type="submit"
+/>Back</button> 
+
+ </div>
+</div>
+
+<script>
+var product = document.getElementById("product").innerHTML;
+function cart(){
+	window.alert(product + " is Added to your Cart");
+	}
+
+function buy(){
+  var x = document.getElementById("buy_option");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  } 	
+</script>
+
+</body>
+</html>
